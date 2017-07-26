@@ -1,6 +1,6 @@
 {
   "name": "rfg",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server"
