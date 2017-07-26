@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Col = ({ size, breakpoint, ...props }) => {
+const Col = (props) => {
   const colStyles = {
     display: 'inline-block',
-    minWidth: `${(size / 12) * 100}%`,
+    minWidth: `${(props.size / 12) * 100}%`,
     maxWidth: '100%',
-    width: `calc((${breakpoint}px - 100%) * ${breakpoint})`
+    width: `calc((${props.breakpoint}px - 100%) * ${props.breakpoint})`
   }
 
   return <div {...props} style={colStyles} />
