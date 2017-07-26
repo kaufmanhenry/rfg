@@ -7,7 +7,8 @@ const Col = (props) => {
     display: 'inline-block',
     minWidth: `${(size / 12) * 100}%`,
     maxWidth: '100%',
-    width: `calc((${breakpoint}px - 100%) * ${breakpoint})`
+    width: `calc((${breakpoint}px - 100%) * ${breakpoint})`,
+    verticalAlign: 'top'
   }
 
   return createElement('div', {style: colStyles}, children)
