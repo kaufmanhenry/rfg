@@ -2,19 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Col = (props) => {
+  const { size, breakpoint, children } = props
   const colStyles = {
     display: 'inline-block',
-    minWidth: `${(props.size / 12) * 100}%`,
+    minWidth: `${(size / 12) * 100}%`,
     maxWidth: '100%',
-    width: `calc((${props.breakpoint}px - 100%) * ${props.breakpoint})`
+    width: `calc((${breakpoint}px - 100%) * ${breakpoint})`
   }
 
-  return <div {...props} style={colStyles} />
+  return <div style={colStyles}>{children}</div>
 }
 
 Col.propTypes = {
   size: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
-  breakpoint: PropTypes.number
+  breakpoint: PropTypes.number,
+  children: PropTypes.node
 }
 
 Col.defaultProps = {
