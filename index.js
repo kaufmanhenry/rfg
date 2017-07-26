@@ -1,4 +1,4 @@
-import React from 'react'
+import { createElement } from 'react'
 import PropTypes from 'prop-types'
 
 const Col = (props) => {
@@ -10,7 +10,7 @@ const Col = (props) => {
     width: `calc((${breakpoint}px - 100%) * ${breakpoint})`
   }
 
-  return <div style={colStyles}>{children}</div>
+  return createElement('div', {style: colStyles}, children)
 }
 
 Col.propTypes = {
