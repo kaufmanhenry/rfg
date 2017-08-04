@@ -1,7 +1,7 @@
 {
   "name": "rfg",
   "version": "1.0.5",
-  "main": "dist/index.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "NODE_ENV=production webpack -p"
