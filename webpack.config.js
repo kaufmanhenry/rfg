@@ -2,12 +2,6 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './dist/index.html',
-  filename: 'index.html',
-  inject: 'body'
-})
-
 module.exports = {
   entry: './demo/index.js',
   output: {
@@ -23,7 +17,8 @@ module.exports = {
       }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig,
+  plugins: [
+    new HtmlWebpackPlugin({ template: './demo/template.ejs' }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()

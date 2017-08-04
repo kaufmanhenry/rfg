@@ -1,9 +1,10 @@
 {
   "name": "rfg",
   "version": "1.0.5",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "NODE_ENV=production webpack -p"
   },
   "keywords": [],
   "author": "Henry Kaufman <hkaufman19@gmail.com>",
@@ -36,5 +37,5 @@
     "webpack-dev-server": "2.4.5"
   },
   "description": "Simple React grid",
-  "repository": "http://github.com/hcjk/grx"
+  "repository": "http://github.com/hcjk/rfg"
 }
