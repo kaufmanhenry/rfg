@@ -1,6 +1,6 @@
 {
   "name": "rfg",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/bundle.js",
   "scripts": {
     "start": "webpack-dev-server",
